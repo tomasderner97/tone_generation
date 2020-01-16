@@ -29,7 +29,7 @@ def parse_tone_name(name):
     tone = tone_names[name[:-1].lower()]
     octave = int(name[-1:])
 
-    return octave - 4 + tone + REFERENCE_NUMBER
+    return octave * 12 - 4 + tone + REFERENCE_NUMBER
 
 
 def set_default_rate(rate: int):
