@@ -92,7 +92,7 @@ class Tone:
 
     def play_in_notebook(self, length=1, rate=DEFAULT_RATE):
         _, signal = self.get_arrays(length)
-        play_array_in_notebook(signal, rate)
+        return play_array_in_notebook(signal, rate)
 
 
 class Chord:
@@ -115,4 +115,4 @@ class Chord:
 
     def play_in_notebook(self, length=1, rate=DEFAULT_RATE):
         _, signal = self.get_arrays(length, rate)
-        play_array_in_notebook(signal, rate)
+        return play_array_in_notebook(signal, rate)
