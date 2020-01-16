@@ -74,6 +74,11 @@ class Tone:
 
         self.frequency = self.reference * self.RATIO ** (self.number - REFERENCE_NUMBER)
 
+    @classmethod
+    def from_name(cls, name):
+        tone_number = parse_tone_name(name)
+        return Tone(tone_number)
+
     def get_relative_tone(self, halfsteps_up):
         return Tone(self.number + halfsteps_up, self.reference)
 
